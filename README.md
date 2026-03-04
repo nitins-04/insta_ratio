@@ -1,25 +1,28 @@
 # insta_ratio
-Want to see who doesn't follow you back? 
 
-First download this the directory to your laptop and put it into a new folder. Also make sure you have Python downloaded.
+Want to see who doesn't follow you back?
 
-Then, follow these steps:
+## Option 1: Use the browser app (no terminal needed)
 
-Go to Settings > Accounts Center > Your information and permissions > Export your information > Create an Export > Export to Device > Customize Information (Clear everything except "followers and following" found in the Connections section > Change format to JSON > Change date range to "All Time".
+This repo now includes a simple web page that runs completely in your browser.
 
-Once you export the file, you should be able to download your information. You should have a json file with your following, and another json file with your followers. Add both of these files to the same folder where your script is. 
+1. Download this repo.
+2. Open `index.html` in your browser.
+3. Export Instagram data from:
+   - **Settings > Accounts Center > Your information and permissions > Export your information > Create an Export > Export to Device**
+   - Click **Customize Information** and leave only **Followers and following** under Connections.
+   - Choose **JSON** format and **All time** range.
+4. In the page, drag and drop your:
+   - `following.json` file in the **Following JSON** box.
+   - `followers_*.json` file in the **Followers JSON** box.
+5. Click **Run Check** to get the list of people who do not follow you back.
 
-Once you have done this all you need to do is run the command - python script.py following.json followers_1.json
+## Option 2: Run the Python script
 
-the json file names may vary but you should do the following file first and followers file second. 
+If you still prefer terminal usage:
 
+```bash
+python script.py following.json followers_1.json
+```
 
-
-
-
-
-
-
-
-
-
+The first argument should be your **following** file and the second should be your **followers** file.

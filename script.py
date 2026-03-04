@@ -2,8 +2,8 @@ import argparse
 import json
 
 parser = argparse.ArgumentParser()
-parser.add_argument("followers_file")
 parser.add_argument("following_file")
+parser.add_argument("followers_file")
 args = parser.parse_args()
 
 with open(args.followers_file) as f:
