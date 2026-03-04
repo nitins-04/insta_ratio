@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insta Ratio — Not Following Back Checker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero">
+        <p class="eyebrow">Insta Ratio</p>
+        <h1>Find who doesn't follow you back.</h1>
+        <p class="subtitle">
+          Upload your Instagram export files locally. Everything runs in your browser — no data leaves your machine.
+        </p>
+      </section>
+
+      <section class="card uploader-card">
+        <h2>Upload your JSON files</h2>
+        <p class="help-text">
+          Add your <strong>following</strong> JSON and <strong>followers</strong> JSON from your Instagram export.
+        </p>
+
+        <div class="file-grid">
+          <label class="file-input">
+            <span>Following JSON</span>
+            <input id="followingFile" type="file" accept=".json,application/json" />
+          </label>
+
+          <label class="file-input">
+            <span>Followers JSON</span>
+            <input id="followersFile" type="file" accept=".json,application/json" />
+          </label>
+        </div>
+
+        <div class="actions">
+          <button id="analyzeBtn" type="button">Analyze files</button>
+          <button id="downloadBtn" class="ghost" type="button" disabled>Download results</button>
+        </div>
+
+        <p id="status" class="status" aria-live="polite"></p>
+      </section>
+
+      <section class="card results-card" id="resultsCard" hidden>
+        <div class="results-header">
+          <h2>Results</h2>
+          <div class="pill">
+            <span id="count">0</span>
+            <small>not following back</small>
+          </div>
+        </div>
+
+        <ul id="resultsList" class="results-list"></ul>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
