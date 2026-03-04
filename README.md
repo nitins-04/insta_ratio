@@ -1,7 +1,7 @@
 # insta_ratio
 Want to see who doesn't follow you back? 
 
-First download this script and put it into a new folder. 
+First download this the directory to your laptop and put it into a new folder. Also make sure you have Python downloaded.
 
 Then, follow these steps:
 
@@ -12,6 +12,11 @@ Once you export the file, you should be able to download your information. You s
 Once you have done this all you need to do is run the command - python script.py following.json followers_1.json
 
 the json file names may vary but you should do the following file first and followers file second. 
+
+
+
+
+
 
 
 
