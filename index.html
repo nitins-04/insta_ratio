@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Insta Ratio Checker</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Instagram Ratio Checker</h1>
+    <p>Drop your <strong>following</strong> and <strong>followers</strong> JSON files from Instagram export to find who does not follow you back.</p>
+
+    <section class="drop-grid">
+      <div class="drop-zone" id="following-zone" data-kind="following">
+        <h2>Following JSON</h2>
+        <p>Drag & drop file here or click to choose</p>
+        <input type="file" id="following-input" accept="application/json" />
+        <small id="following-file">No file selected</small>
+      </div>
+
+      <div class="drop-zone" id="followers-zone" data-kind="followers">
+        <h2>Followers JSON</h2>
+        <p>Drag & drop file here or click to choose</p>
+        <input type="file" id="followers-input" accept="application/json" />
+        <small id="followers-file">No file selected</small>
+      </div>
+    </section>
+
+    <div class="actions">
+      <button id="run-btn" disabled>Run Check</button>
+    </div>
+
+    <p id="status" role="status"></p>
+
+    <section id="results" class="results" hidden>
+      <h2>Not Following Back (<span id="count">0</span>)</h2>
+      <button id="copy-btn">Copy List</button>
+      <ul id="result-list"></ul>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
